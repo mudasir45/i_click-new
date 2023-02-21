@@ -13,7 +13,7 @@ gunicorn==20.1.0
 idna==3.3
 kiwisolver==1.4.4
 matplotlib==3.5.2
-mediapipe==0.8.10.1
+mediapipe==0.9.0.1
 mssql-django==1.2
 numpy==1.23.1
 opencv-contrib-python==4.6.0.66
