@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/95689d2bc7.js" crossorigin="anonymous"></script>
+
+    <title>I-Click</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-onix-digital.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'set.css' %}">
+    
+
+
+<!--
+
+TemplateMo 565 Onix Digital
+
+https://templatemo.com/tm-565-onix-digital
+
+-->
+<!-- <style>
+  .owl-carousel .item:hover{
+    border-radius: 35px;
+  }
+</style> -->
+  </head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo" style="width: 80px;">
+              <img src="{% static 'assets/images/logo.png' %}">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#about">About</a></li>
+              <li class="scroll-to-section"><a href="#portfolio">Gallary</a></li>
+              <li class="scroll-to-section"><a href="#video">Videos</a></li> 
+              <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
+              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="{% url 'stdlogin' %}">Login</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="owl-carousel owl-banner">
+                <div class="item header-text">
+                  <h6>Welcome to University of Okara</h6>
+                  <h2>I <em> Click</em> project ideas <span>exhibition</span></h2>
+                  <p>Innovation is the key to success, and the I click exhibition is the perfect platform for final 
+                    year students to showcase their unique project ideas and make a lasting impression.</p>
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover">
+                      <a href="#contact">Message Us Now</a>
+                    </div>  
+                 
+                  </div>
+                </div>
+                <div class="item header-text">
+                  <h6>Faculty of Computing</h6>
+                  <h2>I Click</h2>
+                  <h2><em>Programming competition</em> on <span>Department level</span></h2>
+                  <p>It's a chance for students to push the boundaries of their abilities, challenge themselves and come out as a winner.</p>
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover">
+                      <a href="#services">Our Services</a>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="services" class="our-services section">
+    <div class="services-right-dec">
+      <img src="{% static 'assets/images/services-right-dec.png' %}" alt="">
+    </div>
+    <div class="container">
+      <div class="services-left-dec">
+        <img src="{% static 'assets/images/services-left-dec.png' %}" alt="">
+      </div>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>Unlocking <em>Creativity and Showcasing Talents </em> with Our   <span>Innovative Tools and Esteemed Judges</span></h2>
+            <h2><em>Innovating for Success</em></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-services">
+            <div class="item">
+              <h4>Future of Technology</h4>
+              <div class="icon"><img src="{% static 'assets/images/service-icon-01.png' %}" alt=""></div>
+              <div class="my-div">
+                <p>The future is shaped by the ideas and creativity of the students Experience the power of technology and innovation</p>
+              </div>
+            </div>
+            <div class="item">
+              <h4>Unique Opportunity</h4>
+              <div class="icon"><img src="{% static 'assets/images/service-icon-02.png' %}" alt=""></div>
+              <div class="my-div">
+                <p>Showcase your talent and creativity in the field of technology and programming Learn and grow as a professional</p>
+              </div>
+              
+            </div>
+            <div class="item">
+              <h4>I click exhibition</h4>
+              <div class="icon"><img src="{% static 'assets/images/service-icon-03.png' %}"alt=""></div>
+              <div class="my-div">
+                              <p>The place where the future of technology is shaped by the ideas of students today Join us and be a part of the innovation journey</p>
+              </div>
+            </div>
+            <div class="item">
+              <h4>Programming Competition at Department Level</h4>
+              <div class="icon"><img src="{% static 'assets/images/service-icon-04.png' %}" alt=""></div>
+              <div class="my-div1">
+                <p>Test your coding skills Compete with your peers for exciting prizes</p>
+              </div>
+              
+            </div>
+            <div class="item">
+              <h4>Judges</h4>
+              <div class="icon"><img src="{% static 'assets/images/service-icon-01.png' %}" alt=""></div>
+              <div class="my-div">
+                <p>Esteemed judges to evaluate the competition entries Selecting the winners with their knowledge and experience</p>
+              </div>
+            </div>
+            <div class="item">
+              <h4>Event Overview</h4>
+              <div class="icon"><img src="{% static 'assets/images/service-icon-02.png' %}" alt=""></div>
+              <div class="my-div">
+                 <p>Innovation is the key to success An opportunity to showcase talents</p>
+              </div>
+            </div>
+            <div class="item">
+              <h4>Discover the digital marketing trend</h4>
+              <div class="icon"><img src="{% static 'assets/images/service-icon-04.png' %}" alt=""></div>
+              <div class="my-div1">
+                <p>Get to know more about the topic in details</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="left-image">
+            <div class="parent">
+              <img src="{% static 'assets/images/about-left-image.png' %}" class="my-image" alt="Two Girls working together">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h2>About <em>I-</em><span>Click</span> Exhibition</h2>
+            <p>The University of Okara is excited to announce the upcoming I-click Exhibition, a showcase of the innovative final year projects from our talented computer science and information technology students. This exhibition is a unique opportunity for our students to demonstrate their skills and knowledge in the fast-growing field of technology and to share their ideas with industry professionals and the wider community.
+
+              The I-click Exhibition is designed to inspire and motivate our students to compete in the global technology market and to raise awareness about the latest technologies and their real-world applications. Visitors will have the chance to see the latest advancements in areas such as artificial intelligence, data science, internet of things, and more.
+              
+              We are also proud to announce the Excellent Awards, which will recognize and reward students with outstanding projects that demonstrate excellence in technology and innovation. These awards are a testament to the hard work and dedication of our students, and we are honored to celebrate their achievements.
+              
+              The I-click Exhibition and Excellent Awards Ceremony are not to be missed! Join us at the University of Okara on [date] to experience the cutting-edge technology and innovative ideas of our students. Mark your calendars, and we look forward to seeing you there!</p>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="fact-item">
+                  <div class="count-area-content">
+                    <div class="icon">
+                      <img src="{% static 'assets/images/service-icon-01.png' %}" alt="">
+                    </div>
+                    <div class="count-digit">60</div>
+                    <div class="count-title">Best projects</div>
+                    <p>Top 60 project will be selected to present in the exhibition</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="fact-item">
+                  <div class="count-area-content">
+                    <div class="icon">
+                      <img src="{% static 'assets/images/service-icon-02.png' %}" alt="">
+                    </div>
+                    <div class="count-digit">05</div>
+                    <div class="count-title">To be awarded</div>
+                    <p>They get the cash prizes as well as appriciation certificates</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="fact-item">
+                  <div class="count-area-content">
+                    <div class="icon">
+                      <img src="{% static 'assets/images/service-icon-03.png' %}" alt="">
+                    </div>
+                    <div class="count-digit">20</div>
+                    <div class="count-title">For Next</div>
+                    <p>These are selected to participate in the 2nd exhibition that's on national level</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio" class="our-portfolio section">
+    <div class="portfolio-left-dec">
+      <img src="{% static 'assets/images/portfolio-left-dec.png' %}" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>Programming <em>competitions and project  </em> exhibitions:  <span> where ideas meet execution</span></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-portfolio">
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'assets/images/1.jpg' %}" class="custom-thumb thumb:hover" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="sponsored" href="https://templatemo.com/tm-564-plot-listing" target="_parent"><h4>Exhibition Insights</h4></a>
+                    <span>Discovering the latest trends and ideas in exhibitions</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'assets/images/2.jpg' %}" class="custom-thumb thumb:hover" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>Competition Innovations</h4></a>
+                    <span>Exploring the cutting-edge technology and programming in competitions.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'assets/images/3.jpg' %}" class="custom-thumb thumb:hover" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="sponsored" href="https://templatemo.com/tm-562-space-dynamic" target="_parent"><h4>Project Possibilities</h4></a>
+                    <span>Unlocking new potential and ideas through exhibitions, competitions, and technology</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'assets/images/4.jpg' %}" class="custom-thumb thumb:hover" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>Creative Concepts</h4></a>
+                    <span>Exploring diverse project ideas and inspiration.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'assets/images/5.jpg' %}" class="custom-thumb thumb:hover" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>Innovative Inspiration</h4></a>
+                    <span>Finding new ideas through exhibitions, competitions, and technology.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'assets/images/6.jpg' %}" class="custom-thumb thumb:hover" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>Coding Challenges</h4></a>
+                    <span>Unlocking new possibilities and skills through coding competitions.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'assets/images/7.jpg' %}" class="custom-thumb thumb:hover" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>Coding Progression</h4></a>
+                    <span>Advancing skills and knowledge through coding competitions.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'assets/images/8.jpg' %}" class="custom-thumb thumb:hover" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>Coding Competition</h4></a>
+                    <span>Exploring the latest advancements in programming and technology.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="video" class="our-videos section">
+    <div class="videos-left-dec">
+      <img src="{% static 'assets/images/videos-left-dec.png' %}" alt="">
+    </div>
+    <div class="videos-right-dec">
+      <img src="{% static 'assets/images/videos-right-dec.png' %}" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-8">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/JynGuQx4a1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <div class="overlay-effect">
+                            <a href="#"><h4>Univeristy of Okara</h4></a>
+                            <span>Faculty of Computing</span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/RdJBSFpcO4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <div class="overlay-effect">
+                            <a href="#"><h4>Programming Competiton</h4></a>
+                            <span>Department level Programming Competiton</span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="menu">
+                    <div class="active">
+                      <div class="thumb">
+                        <img src="{% static 'assets/images/video-thumb-03.png' %}" alt="">
+                        <div class="inner-content">
+                          <h4>I-Click</h4>
+                          <span>Final Year Project Ideas Exhibition</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <img src="{% static 'assets/images/video-thumb-04.png' %}" alt="">
+                        <div class="inner-content">
+                          <h4>Programming Competiton</h4>
+                          <span>Department level Programming Competiton</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>             
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="section-heading">
+            <h2>Feel free to <em>Contact</em> us via the <span>HTML form</span></h2>
+            <div id="map">
+              <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="360px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+            </div>
+            <div class="info">
+              <span><i class="fa fa-phone"></i> <a href="#">010-020-0340<br>090-080-0760</a></span>
+              <span><i class="fa fa-envelope"></i> <a href="#">info@company.com<br>mail@company.com</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <form id="contact" action="" method="get">
+            <div class="row">
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="website" id="website" placeholder="Your Website URL" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="main-button">Submit Request</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contact-dec">
+      <img src="{% static 'assets/images/contact-dec.png' %}" alt="">
+    </div>
+    <div class="contact-left-dec">
+      <img src="{% static 'assets/images/contact-left-dec.png' %}" alt="">
+    </div>
+    <div class="footer-dec">
+      <img src="{% static 'assets/images/footer-dec.png' %}" alt="">
+    </div>
+  </div>
+    <div class="footer-dark">
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-6 col-md-3 item section-heading">
+                      <h3><span>Quick Links</span></h3>
+                      <ul class="mt-2">
+                          <li><a href="#top">Home</a></li>
+                          <li><a href="#portfolio">Gallary</a></li>
+                          <li><a href="#video">Videos</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-6 col-md-3 item section-heading">
+                      <h3><span>About US</span></h3>
+                      <ul class="mt-2">
+                          <li><a href="#about">About</a></li>
+                          <li><a href="#contact">Contact Us</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-6 item text section-heading">
+                      <h3><span>Events </span></h3>
+                      <p class="mt-2">Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                  </div>
+                  <div class="col item social d-flex align-items-center justify-content-center mt-5">
+                    <div class="social-circle">
+                        <a href="https://www.instagram.com/okarauniversityofficial/?hl=en" data-bs-toggle="tooltip" title="instagram">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/okarauniversityofficial" data-bs-toggle="tooltip" title="facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/uofokara?lang=en" data-bs-toggle="tooltip" title="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://pk.linkedin.com/school/university-of-okara/" data-bs-toggle="tooltip" title="linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                <i aria-hidden="true"><a href="mailto::info@uo.edu.pk" class="text-grey"><i class="fa-solid fa-envelope"></i>info@uo.edu.pk</a></i>
+
+                
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="copyright">
+                          <p>All Rights Reserved. 
+                          <br>
+                          Designed by <a rel="nofollow" href="#" >Mudassar Amin and will be adjusted by 'Samina Asghar'</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+      </footer>
+
+
+  <!-- Scripts -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/animation.js' %}"></script>
+  <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+
+
+  <script>
+
+// Acc
+    $(document).on("click", ".naccs .menu div", function() {
+      var numberIndex = $(this).index();
+
+      if (!$(this).is("active")) {
+          $(".naccs .menu div").removeClass("active");
+          $(".naccs ul li").removeClass("active");
+
+          $(this).addClass("active");
+          $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+          var listItemHeight = $(".naccs ul")
+            .find("li:eq(" + numberIndex + ")")
+            .innerHeight();
+          $(".naccs ul").height(listItemHeight + "px");
+        }
+    });
+  </script>
+</body>
+</html>

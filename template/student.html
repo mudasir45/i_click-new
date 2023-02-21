@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	{% load static %}
+	{% load star_rating %}
+	<title>admin-pannal</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="{% static 'my_style1.css' %}">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/b4bf452f47.js" crossorigin="anonymous"></script>
+	
+
+	<style>
+		.nav-link{
+			color: white;
+			margin: 0px 15px;
+		}
+		.nav-link:hover{
+			color: red;
+		}
+		.nav-link.active{
+			color: red !important;
+		}
+		.content{
+		display: flex;
+		justify-content: center;
+		}
+
+		.review-card {
+			background-color: #f4f4f4;
+			padding: 20px;
+			margin-bottom: 20px;
+			border-radius: 10px;
+			box-shadow: 2px 2px 10px #ccc;
+
+		}
+
+		.review-card .card-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 15rem;
+		}
+
+		.review-card .card-header h4 {
+			margin-bottom: 0;
+
+		}
+
+		.card-img-top {
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			margin: 0 auto 20px;
+			display: block;
+		}
+
+		.star_rating {
+			color: orange;
+		}
+
+.progress1{
+    height: 7px;
+    background: #c7c7c7;
+    border-radius: 5px;
+    box-shadow: none;
+    margin: 40px 0 70px;
+    overflow: visible;
+    position: relative;
+	width: 100%;
+}
+.progress1 .progress-title1{
+    padding: 7px 10px;
+    margin: 0;
+    background: #393a3d;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 7px 7px rgba(0,0,0,0.4);
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: -13px;
+    left: 0;
+    z-index: 1;
+}
+.progress1 .progress-title1:after{
+    content: "";
+    border-left: 17px solid #393a3d;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    position: absolute;
+    top: 0;
+    right: -17px;
+}
+.progress1 .progress-bar1{
+    box-shadow: none;
+    border-radius: 0;
+    position: relative;
+    -webkit-animation: animate-positive 2s;
+    animation: animate-positive 2s;
+	height: 8px;
+
+}
+.progress1 .progress-bar1:after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.6);
+    background: #fff;
+    position: absolute;
+    right: -5px;
+    top: -6px;
+}
+.progress1 .progress-value1{
+    width: 55px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 3px;
+    background: #393a3d;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(244, 244, 244);
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    right: -17px;
+}
+.progress1 .progress-value1-final{
+    width: 100px;
+    height: 35px;
+    line-height: 30px;
+    border-radius: 5px;
+    background: #393a3d;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(244, 244, 244);
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    right: -17px;
+}
+.progress1 .progress-value1:after{
+    content: "";
+    border-top: 7px solid #393a3d;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    position: absolute;
+    bottom: -7px;
+    left: 35%;
+}
+.progress1.green1 .progress-bar1:after{ border: 5px solid #21da9a; }
+.progress1.pink1 .progress-bar1:after{ border: 5px solid #ff1170; }
+.progress1.blue1 .progress-bar1:after{ border: 5px solid #294bdc; }
+.progress1.yellow1 .progress-bar1:after{ border: 5px solid #ffa900; }
+@-webkit-keyframes animate-positive{
+    0% { width: 0; }
+}
+@keyframes animate-positive{
+    0% { width: 0; }
+}
+		.demo {
+			background: #262526;
+		}
+
+		.our-team {
+			padding: 20px 15px 30px;
+			background: rgb(98, 127, 129);
+			border-radius: 15px;
+			text-align: center;
+		}
+
+		.our-team .pic {
+			display: inline-block;
+			/* width: 100%; */
+			/* height: 100%; */
+			background: #fff;
+			padding: 10px;
+			margin-bottom: 25px;
+			transition: all 0.5s ease 0s;
+			width: 220px;
+			height: 220px;
+			background: #17bebb;
+			border-radius: 50%;
+		}
+		
+		.our-team:hover .pic {
+			background: #24a0b6;
+			width: 220px;
+			height: 220px;
+			border-radius: 47%;
+		}
+
+		.pic img {
+			/* width: 100%; */
+			width: 200px;
+			height: 200px;
+			/* height: 50%; */
+			/* height: auto; */
+			border-radius: 80%;
+		}
+
+		.our-team .title {
+			display: block;
+			font-size: 20px;
+			font-weight: 600;
+			color: #2e282a;
+			text-transform: uppercase;
+			margin: 0 0 7px 0;
+		}
+
+		.our-team .post {
+			display: block;
+			font-size: 15px;
+			color: #17bebb;
+			text-transform: capitalize;
+			margin-bottom: 15px;
+		}
+
+		.our-team .social {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		.our-team .social li {
+			display: inline-block;
+			margin-right: 5px;
+		}
+
+		.our-team .social li a {
+			display: block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 50%;
+			font-size: 15px;
+			color: #17bebb;
+			border: 1px solid #17bebb;
+			transition: all 0.5s ease 0s;
+		}
+
+		.our-team:hover .social li a {
+			background: #17bebb;
+			color: #fff;
+		}
+
+		@media only screen and (max-width: 990px) {
+			.our-team {
+				margin-bottom: 30px;
+			}
+		}
+
+
+		.our-team1 {
+			border: 2px solid #ff3232;
+			border-radius: 10px;
+			text-align: center;
+			margin: 10px;
+			z-index: 1;
+			position: relative;
+		}
+
+		.our-team1:before,
+		.our-team1:after {
+			content: "";
+			width: 100%;
+			height: 104%;
+			background: #ff3232;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			z-index: -1;
+			transform: translateY(-50%) scaleX(0.3);
+			transition: all 0.3s ease 0s;
+		}
+
+		.our-team1:after {
+			width: 106%;
+			left: 50%;
+			transform: translate(-50%, -50%) scaleY(0.25);
+		}
+
+		.our-team1:hover:before {
+			transform: translateY(-50%) scaleX(0.7);
+		}
+
+		.our-team1:hover:after {
+			transform: translate(-50%, -50%) scaleY(0.7);
+		}
+
+		.our-team1 img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+			transition: all 0.3s ease 0s;
+		}
+
+		.our-team1 .team-content {
+			width: 93%;
+			padding: 25px 0 10px;
+			background: #ff4444;
+			position: absolute;
+			bottom: 50px;
+			left: 50%;
+			opacity: 0;
+			-webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+			clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+			transform: translateX(-50%);
+			transition: all 0.3s cubic-bezier(0.5, 0.2, 0.1, 0.9);
+		}
+
+		.our-team1:hover .team-content {
+			bottom: 10px;
+			opacity: 1;
+		}
+
+		.our-team1 .title {
+			font-size: 25px;
+			font-weight: 600;
+			color: #fff;
+			letter-spacing: 1px;
+			text-transform: capitalize;
+			margin: 0;
+		}
+
+		.our-team1 .post {
+			display: block;
+			font-size: 16px;
+			color: #fff;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+		}
+
+		.our-team1 .social {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		.our-team1 .social li {
+			display: inline-block;
+			margin: 0 5px;
+		}
+
+		.our-team1 .social li a {
+			display: block;
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
+			border-radius: 50%;
+			background: #fff;
+			font-size: 20px;
+			color: #ff3232;
+			transition: all 0.3s ease 0s;
+		}
+
+		.our-team1 .social li a:hover {
+			background: linear-gradient(to bottom, #ff3232, darkred);
+			box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3);
+			color: #fff;
+		}
+
+		@media only screen and (max-width: 990px) {
+			.our-team {
+				margin-bottom: 30px;
+			}
+		}
+
+		.adj-std {
+			width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+		}
+
+
+
+		
+		
+ 
+.testimonial{
+    margin: 15px 0;
+}
+.testimonial .testimonial-content{
+    width: 20%;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    margin-right: 5%;
+}
+.testimonial .pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 8px solid rgba(0, 0, 0, 0.15);
+}
+.testimonial .pic img{
+    width: 100%;
+    height: 100%;
+}
+.testimonial .title{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 10px 0 0 0;
+}
+.testimonial .post{
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+}
+.testimonial .description{
+    display: inline-block;
+    width: 75%;
+    padding: 30px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    position: relative;
+}
+.testimonial .description:before{
+    content: "";
+    border: 10px solid transparent;
+    border-right: 10px solid rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 20px;
+    left: -21px;
+}
+.owl-theme .owl-controls .owl-page.active span{
+    background: #fff;
+    border: 1px solid #fff;
+}
+.owl-theme .owl-controls .owl-page span{
+    border: 1px solid #fff;
+    background: transparent;
+    opacity: 1;
+}
+@media only screen and (max-width: 767px){
+    .testimonial .testimonial-content{
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .testimonial .description{
+        width: 100%;
+    }
+    .testimonial .description:before{
+        border: 10px solid transparent;
+        border-bottom: 10px solid rgba(255,255,255,0.15);
+        position: absolute;
+        top: -20px;
+        left: 47.5%;
+    }
+}
+.checked{
+	color: orange;
+}
+
+.review-card1{
+	margin-top: 35px;
+	border: 1px solid grey;
+	border-radius: 30px;
+	padding: 30px;
+	border-left: 4px solid red;
+	border-right: 4px solid red;
+}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container mt-3 mb-4">
+		<div class="content">
+			<h3>University of Okara</h3>
+		</div>
+		<div class="content">
+			<p>I-Click</p> 
+		</div>
+		<div class="content">
+			<span>Project Ideas competition</span>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-lg " style="background-color:rgb(43, 41, 41);" >
+		<div class="container" style=" display: flex; justify-content: center; ">
+			<div class="nav_items" style="display: flex; justify-content: center;">
+		  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<form action="{% url 'stdupdate' %}" method="post">
+					{% csrf_token %}
+					<input type="hidden" name="std_id" value="{{student.p_id}}">
+					<input type="hidden" name="username" value="{{username}}">
+					<input type="hidden" name="password" value="{{password}}">
+					<button type="submit" style="outline: none; border: none; background-color:rgb(43, 41, 41); " class="nav-link">Update Details</button>
+				</form>  
+			</li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  Dropdown
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link ">Disabled</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+		</div>
+	  </nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="adj-std">
+				<div class="col-md-3 col-sm-6">
+					<div class="our-team">
+						<div class="pic">
+							<img src="{{student.member1_pic.url}}">
+						</div>
+						<h3 class="title">{{student.member1}}</h3>
+						<span class="post">{{student.member3_rol}}</span>
+						<span class="post">{{student.dept}}</span>
+						<ul class="social">
+							<li><a href="#" class="fab fa-facebook"></a></li>
+							<li><a href="#" class="fab fa-twitter"></a></li>
+							<li><a href="#" class="fab fa-google-plus"></a></li>
+							<li><a href="#" class="fab fa-linkedin"></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<div class="our-team">
+						<div class="pic" style="background-color: #bcd628;">
+							<img src="{{student.member2_pic.url}}">
+						</div>
+						<h3 class="title">{{student.member2}}</h3>
+						<span class="post">{{student.member3_rol}}</span>
+						<span class="post">{{student.dept}}</span>
+						<ul class="social">
+							<li><a href="#" class="fab fa-facebook"></a></li>
+							<li><a href="#" class="fab fa-twitter"></a></li>
+							<li><a href="#" class="fab fa-google-plus"></a></li>
+							<li><a href="#" class="fab fa-linkedin"></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<div class="our-team">
+						<div class="pic">
+							<img src="{{student.member3_pic.url}}">
+						</div>
+						<h3 class="title">{{student.member3}}</h3>
+						<span class="post">{{student.member3_rol}}</span>
+						<span class="post">{{student.dept}}</span>
+						<ul class="social">
+							<li><a href="#" class="fab fa-facebook"></a></li>
+							<li><a href="#" class="fab fa-twitter"></a></li>
+							<li><a href="#" class="fab fa-google-plus"></a></li>
+							<li><a href="#" class="fab fa-linkedin"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container mt-5 mb-5">
+		<div class="row">
+			<div class="col">
+				<div class="text-center">
+					<h2 class="heading-section Ptitle mt-3">{{student.project_title}}</h2>
+				</div>
+				<div class="text-center pdisc">
+					<p>{{student.project_description}}</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="adj-std" >
+				<div class="col-md-6" style="border: 1px solid grey; border-radius: 25px;  padding: 0px 15px;" >
+					<div class="adst_bar" style=" padding: 45px 35px;">
+						<div class="progress1 yellow1">
+							<h3 class="progress-title1">Rating#1 </h3>
+							<div class="progress-bar1" style="width:{{width1}}%; background:#ffa900;">
+								<div class="progress-value1">{{rating1_avg}}<i class="fas fa-star checked"></i></div>
+							</div>
+						</div>
+			 
+						<div class="progress1 yellow1">
+							<h3 class="progress-title1">Rating#2</h3>
+							<div class="progress-bar1" style="width:{{width2}}%; background:#ffa900;">
+								<div class="progress-value1">{{rating2_avg}}<i class="fas fa-star checked"></i></div>
+								0.1
+							</div>
+						</div>
+			 
+						<div class="progress1 yellow1">
+							<h3 class="progress-title1">Rating#3</h3>
+							<div class="progress-bar1" style="width:{{width3}}%; background:#ffa900;">
+								<div class="progress-value1">{{rating3_avg}}<i class="fas fa-star checked"></i></div>
+							</div>
+						</div>
+			 
+						<div class="progress1 yellow1">
+							<h3 class="progress-title1">Rating#4</h3>
+							<div class="progress-bar1" style="width:{{width4}}%; background:#ffa900;">
+								<div class="progress-value1">{{rating4_avg}}<i class="fas fa-star checked"></i></div>
+							</div>
+						</div>
+			 
+					</div>
+					<div class="progress1 blue1">
+						<h3 class="progress-title1">Total Points</h3>
+						<div class="progress-bar1" style="width:{{width_total}}%; background:#294bdc;">
+							<div class="progress-value1-final">{{total_rating}} Points</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="our-team1">
+						<img src="{{ MEDIA_URL }}{{student.supervisor.picture.url}}">
+						<div class="team-content">
+							<h3 class="title">{{student.supervisor.name }}</h3>
+							<span class="post">{{student.supervisor.qualif}}</span>
+							<ul class="social">
+								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	 <!-- <div class="demo"> -->
+		{% for i in reviewer_details %}
+        <div class="container" style="background-color: #ffffff; border: 1px solid grey; border-radius: 35px; margin-top: 20px;">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-9">
+                    <div id="testimonial-slider" class="owl-carousel">
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <div class="pic">
+                                    <img src="{{i.picture}}" alt="">
+                                </div>
+                                <h3 class="title">{{i.reviewer_name}}</h3>
+                                <span class="post">{{i.reviewer_qualif}}</span>
+								{% if i.avg_star == 5%}
+								<div>
+									<i class="fas fa-star checked"></i>
+									<i class="fas fa-star checked"></i>
+									<i class="fas fa-star checked"></i>
+									<i class="fas fa-star checked"></i>
+									<i class="fas fa-star checked"></i>
+								</div>
+								{% elif i.avg_star >= 4%}
+								<div>
+									<i class="fas fa-star checked"></i>
+									<i class="fas fa-star checked"></i>
+									<i class="fas fa-star checked"></i>
+									<i class="fas fa-star checked"></i>
+									<i class="far fa-star checked"></i>
+								</div>
+								{% elif i.avg_star >= 3%}
+								<div>
+									<i class="fas fa-star checked"></i>
+									<i class="fas fa-star checked"></i>
+									<i class="fas fa-star checked"></i>
+									<i class="far fa-star checked"></i>
+									<i class="far fa-star checked"></i>
+								</div>
+								{% elif i.avg_star >= 2%}
+								<div>
+									<i class="fas fa-star checked"></i>
+									<i class="fas fa-star checked"></i>
+									<i class="far fa-star checked"></i>
+									<i class="far fa-star checked"></i>
+									<i class="far fa-star checked"></i>
+								</div>
+								{% elif i.avg_star >= 1%}
+								<div>
+									<i class="fas fa-star checked"></i>
+									<i class="far fa-star checked"></i>
+									<i class="far fa-star checked"></i>
+									<i class="far fa-star checked"></i>
+									<i class="far fa-star checked"></i>
+								</div>
+								{% endif%}
+                            </div>
+                            <p class="description">
+                               {{i.review}}
+							   {{i.avg_star}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		{% endfor %}
+    <!-- </div> -->
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>

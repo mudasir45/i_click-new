@@ -1,0 +1,152 @@
+.card {
+    text-align: center; /* center the text */
+    justify-content: center;
+    border: 2px solid red ;
+    border-radius: 50px;
+    padding: 15px 0px;
+    width: 15rem;
+    border-color: blue;
+    box-shadow: 0 0 10px blue;
+
+}
+.card .card-title {
+    font-size: 1.2em;
+}
+.card .card-text {
+    font-size: 1em;
+}
+.card img {
+    border-radius: 50%;
+}
+.card img {
+    box-shadow: 2px 2px 5px 0px #ccc;
+}
+.card:hover {
+    border-color: red;
+    box-shadow: 0 0 10px red;
+}
+.card-bg {
+    background-color: #f5f5f5;
+}
+
+.icon1{
+    width: 70px;
+    
+}
+.container
+{
+    text-align: center;
+    padding: 15px;
+    
+}
+.Ptitle
+{
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px #666;
+    box-shadow: 5px 5px 10px 0px #aaa,
+    -5px -5px 10px 0px #fff;
+}
+.pdisc
+{
+    border-radius: 20px;
+    font-size: 1.2em;
+    /* text-shadow: 1px 1px 2px #666; */
+    box-shadow: 2px 2px 5px 0px #aaa, inset 1px 1px 2px #fff;
+    padding: 15px;
+}
+.review-section {
+padding: 20px;
+background-color: #f5f5f5;
+border-right: 2px solid #ccc;
+}
+
+.review-section h2 {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.review-form {
+display: flex;
+flex-direction: column;
+align-items: left;
+padding: 20px;
+border: 2px solid #ccc;
+/* border: 2px solid red; */
+border-radius: 10px;
+}
+
+.review-form textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border: none;
+outline:#666;
+border-radius: 5px;
+resize: none;
+}
+
+/* ... */
+.star_adjust{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+.star-content{
+    display: inline-block;
+    width: 30%;
+    align-items: center;
+}
+
+.supervisor-section {
+padding: 20px;
+background-color: #f5f5f5;
+}
+
+.supervisor-section h2 {
+text-align: center;
+margin-bottom: 30px;
+}
+
+.supervisor-info {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.supervisor-info img {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+margin-right: 20px;
+}
+
+.supervisor-details {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.supervisor-name {
+font-size: 2em;
+margin-bottom: 10px;
+}
+
+.supervisor-qualification {
+font-style: italic;
+}
+
+*{
+margin: 0;
+padding: 0;
+}
+
+
+

@@ -1,0 +1,51 @@
+.img-hover:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .custom-thumb {
+    height: 600px;
+  }
+
+  .thumb:hover, .thumbnail:hover{
+    box-shadow: 4px 4px 10px #333;
+  }
+  .my-div {
+    height: 200px;
+  }
+  .my-div1{
+    height: 171px;
+  }
+  /* .my-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* transform: translateY(-50%); 
+}
+.parent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+} */
+
+@media (min-width:900px) {
+  .header-text {
+    margin-left: 20px;
+  }
+}
+.footer-dark .social-circle > a {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #2F72D2;
+  margin: 0 8px;
+  color: #FF695F;
+}
+  
+  
+  
+  
+
